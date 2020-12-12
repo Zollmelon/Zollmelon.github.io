@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+
+  <!-- PACE Progress Bar START -->
+  
+    <script src="https://raw.githubusercontent.com/HubSpot/pace/v1.0.2/pace.min.js"></script>
+    <link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
+  
+  
+
+  <!-- PACE Progress Bar START -->
+
+  
+  <title>rss使用经验 | Zollmelonの小站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="tool">
+  
+  
+    <meta name="google-site-verification" content="EfaD1kbLawTlejbwu9XEwy5lB3jRWmJnn2IyZ9IjXpw">
+  
+  
+  
+  <meta name="description" content="胡乱折腾了一天rss，记录下一些经验感受。">
+<meta name="keywords" content="tool">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RSS使用经验">
+<meta property="og:url" content="https://zollmelon.com/RSS使用经验/index.html">
+<meta property="og:site_name" content="Zollmelonの小站">
+<meta property="og:description" content="胡乱折腾了一天rss，记录下一些经验感受。">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://i.loli.net/2020/12/13/jUxEfIgDlMqZXWa.jpg">
+<meta property="og:updated_time" content="2020-12-12T21:36:04.664Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RSS使用经验">
+<meta name="twitter:description" content="胡乱折腾了一天rss，记录下一些经验感受。">
+<meta name="twitter:image" content="https://i.loli.net/2020/12/13/jUxEfIgDlMqZXWa.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Zollmelonの小站" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/hiero.css">
+  <link rel="stylesheet" href="/css/glyphs.css">
+  
+    <link rel="stylesheet" href="/css/vdonate.css">
+  
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/my.css">
+  <!-- Google Adsense -->
+  
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-0123456789ABCDEF",
+          enable_page_level_ads: true
+      });
+  </script>
+  
+</head>
+</html>
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "Home"; 
+
+  themeMenus["/archives"] = "Archives"; 
+
+  themeMenus["/categories"] = "Categories"; 
+
+  themeMenus["/tags"] = "Tags"; 
+
+  themeMenus["/about"] = "About"; 
+
+  themeMenus["/links"] = "links"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" rel="home" >
+                <img style="margin-bottom: 10px;"  width="124px" height="124px" alt="Hike News" src=" /css/images/mylogo.png">
+              </a>
+            
+          </h1>
+
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/links">links</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,https://i.loli.net/2019/09/19/5VOjS9PQNhK2RUz.jpg".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-RSS使用经验" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="https://i.loli.net/2020/12/13/jUxEfIgDlMqZXWa.jpg" rel="gallery_ckim82m9r004aaok7kpxk649e">
+        <img src="https://i.loli.net/2020/12/13/jUxEfIgDlMqZXWa.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      RSS使用经验
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/RSS使用经验/" class="article-date">
+	  <time datetime="2020-12-12T21:08:23.000Z" itemprop="datePublished">十二月 13, 2020</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>胡乱折腾了一天<a href="https://baike.baidu.com/item/rss" target="_blank" rel="noopener">rss</a>，记录下一些经验感受。<a id="more"></a></p>
+<h1 id="what-is-rss"><a href="#what-is-rss" class="headerlink" title="what is rss"></a>what is rss</h1><blockquote>
+<p><a href="https://baike.baidu.com/item/简易信息聚合" target="_blank" rel="noopener">简易信息聚合</a>（也叫聚合内容）是一种RSS基于<a href="https://baike.baidu.com/item/XML" target="_blank" rel="noopener">XML</a>标准，在互联网上被广泛采用的内容包装和投递协议。RSS(Really Simple Syndication)是一种描述和同步网站内容的格式，是使用最广泛的XML应用。RSS搭建了信息迅速传播的一个技术平台，使得每个人都成为潜在的信息提供者。发布一个RSS文件后，这个RSS Feed中包含的信息就能直接被其他站点调用，而且由于这些数据都是标准的XML格式，所以也能在其他的<a href="https://baike.baidu.com/item/终端/1903878" target="_blank" rel="noopener">终端</a>和服务中使用，是一种描述和同步网站内容的格式。 </p>
+<p>RSS可以是以下三个解释的其中一个： Really Simple Syndication；RDF (Resource Description Framework) Site Summary； Rich Site Summary。但其实这三个解释都是指同一种Syndication的技术。</p>
+<p>——By 百度百科 <a href="https://baike.baidu.com/item/rss" target="_blank" rel="noopener">rss</a></p>
+</blockquote>
+<p><a href="https://github.com/AboutRSS/ALL-about-RSS#rsshub" target="_blank" rel="noopener">ALL-about-RSS</a>上也有专门的科普模块<a href="https://github.com/AboutRSS/ALL-about-RSS#a-webpage-in-chinese-to-explain-what-rss-is" target="_blank" rel="noopener">What is RSS</a></p>
+<h1 id="Why-rss-？"><a href="#Why-rss-？" class="headerlink" title="Why rss ？"></a>Why rss ？</h1><p>让我接触到rss这个看起来有些过时工具是<a href="https://docs.rsshub.app/" target="_blank" rel="noopener">RSSHub</a>，这个开源项目免费地提供诸多平台的rss方案，让人一时间感觉如获至宝，因为它很大程度上解决了这个信息泛滥时代的痛点。</p>
+<ol>
+<li>在单一信息源内，信息难以集中。举个例子，我在微博关注了一些博主，但是这些博主的消息对我而言其实是有区别的，即我是否有带有目的性。有些消息是高质量、即时性的，我需要带着目的经常关注（例如我喜欢篮球，喜欢詹姆斯，便关注了<a href="https://weibo.com/jamesbar" target="_blank" rel="noopener">詹姆斯吧官方微博</a>，方便没时间看球赛时了解赛况）。而一些博主因其领域风格不同，只是偶尔看看（例如我关注的<a href="https://weibo.com/sickipedia" target="_blank" rel="noopener">英式没品笑话百科</a>，发博频率高，必需性不强）。但是当我打开微博时，这些信息蜂拥而至，加大了获取信息的难度，也容易分散注意力。</li>
+<li>信息渠道繁多复杂，效率低。互联网发展至今，信息渠道这块早已是移动端的天下。每天网上冲下浪，不得不打开好几个app。对于我这种不喜欢app后台推送的人，让我去找信息就会变得比较麻烦。</li>
+<li>博客。和rss同一时代的产物，在移动时代早已没落。如今新媒体才是主流内容创作者的主要阵营，但是在互联网的角落还是有不少优质博客的。而在以前，博客也正是通过rss传递信息。</li>
+<li>一些平台的推送，例如推特，油管等需要科学。而rss可以免科学接收推送</li>
+</ol>
+<p>而rss以及<a href="https://docs.rsshub.app" target="_blank" rel="noopener">RSSHub</a>的存在，会在很大程度上方便地解决这些问题。聚焦于我需要关注的信息，并且让信息通过单一渠道找我。</p>
+<h1 id="rss-Tools"><a href="#rss-Tools" class="headerlink" title="rss Tools"></a>rss Tools</h1><p><a href="https://docs.rsshub.app" target="_blank" rel="noopener">RSSHub</a>以及我后来发现的<a href="https://github.com/AboutRSS/ALL-about-RSS#rsshub" target="_blank" rel="noopener">ALL-about-RSS</a>，基本上可以满足绝大部分的信息需求。</p>
+<h2 id="ALL-about-RSS"><a href="#ALL-about-RSS" class="headerlink" title="ALL-about-RSS"></a>ALL-about-RSS</h2><ul>
+<li><a href="https://github.com/AboutRSS/ALL-about-RSS#rsshub" target="_blank" rel="noopener">ALL-about-RSS</a>名副其实，全面细致的包含了rss的方方面面，技术科普、阅读工具、免费服务、订阅源汇总，以及一些衍生出的灵活花样（例如rss to telegram、Podcast、邮箱等）。</li>
+</ul>
+<h2 id="rss源"><a href="#rss源" class="headerlink" title="rss源"></a>rss源</h2><ul>
+<li>而<a href="https://docs.rsshub.app" target="_blank" rel="noopener">RSSHub</a>，是中文圈rss订阅方案大集合，免费提供了大量平台渠道。</li>
+</ul>
+<p>ALL-about-RSS包罗万象，更像是一本百科全书，可以找到适合自己的工具。而<a href="https://docs.rsshub.app" target="_blank" rel="noopener">RSSHub</a>可以满足中文圈的大部分订阅源需求。</p>
+<p>但可惜的是，今年由于不可抗力，<a href="https://docs.rsshub.app" target="_blank" rel="noopener">RSSHub</a>的网站以及订阅源需科学的方法访问。解决方法：</p>
+<ol>
+<li>有在线服务的rss阅读器例如<a href="https://www.inoreader.com/" target="_blank" rel="noopener">Inoreader</a>、<a href="https://feedly.com" target="_blank" rel="noopener">Feedly</a>等可以解析<a href="https://docs.rsshub.app" target="_blank" rel="noopener">RSSHub</a>的源。</li>
+<li><a href="https://github.com/AboutRSS/ALL-about-RSS#rsshub" target="_blank" rel="noopener">免费分享的 RSSHub 镜像服务</a> ::point_left:，将RSSHub官方域名换成镜像域名便可。</li>
+<li>自建镜像服务</li>
+</ol>
+<h2 id="浏览器扩展"><a href="#浏览器扩展" class="headerlink" title="浏览器扩展"></a>浏览器扩展</h2><ul>
+<li><p>浏览器扩展可以快速添加rss源：</p>
+<ol>
+<li><p><a href="https://chrome.google.com/webstore/detail/rsshub-radar/kefjpfngnndepjbopdmoebkipbgkggaa" target="_blank" rel="noopener">RSSHGub Radar</a><img src="https://lh3.googleusercontent.com/rKIdqVZJcuDlDcYTIOUEPAfZlJ-PGAuCOM6xjfgee1Zcbl1uvdSWbwW_T4Ey-faHm1zzZZ7c02Hh0aMaBci4dQx7lQ=w640-h400-e365-rj-sc0x00ffffff" alt></p>
+</li>
+<li><p><a href="https://chrome.google.com/webstore/detail/rss-reader-extension-by-i/kfimphpokifbjgmjflanmfeppcjimgah" target="_blank" rel="noopener">RSS Reader Extension (by Inoreader)</a></p>
+<p><img src="https://lh3.googleusercontent.com/r9YmGrqOqafXAlp8LzYTh_9VnR4gEb5BOySYgFyNYifl_FO_NJPMsbqcJO0OTQtD5igQbpZShYiWqs2yMwC3Zuoe=w640-h400-e365-rj-sc0x00ffffff" alt></p>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="自用方案"><a href="#自用方案" class="headerlink" title="自用方案"></a>自用方案</h1><h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><p>我是在<a href="https://docs.rsshub.app" target="_blank" rel="noopener">RSSHub</a>项目刚出现时开始使用的Inoreader安卓端，当时也了解到的rss软件也不多，但现在看来Inoreader虽然老牌，但还是最好的选择之一。以下根据自己了解，简单介绍一下几款：</p>
+<ol>
+<li><p><a href="https://github.com/seazon/FeedMe/blob/master/README.md" target="_blank" rel="noopener">Feedme</a></p>
+<ul>
+<li><input checked disabled type="checkbox"> 可登录其它软件帐号</li>
+<li><input checked disabled type="checkbox"> 登录时可更改Inoreader域名</li>
+<li><input checked disabled type="checkbox"> 可搜索添加源</li>
+<li><input checked disabled type="checkbox"> 收藏，标签功能</li>
+<li><input checked disabled type="checkbox"> 自定义程度高</li>
+<li><input checked disabled type="checkbox"> 界面美观</li>
+<li><input checked disabled type="checkbox"> 桌面小部件</li>
+<li><input checked disabled type="checkbox"> 开源免费无广告</li>
+<li><input disabled type="checkbox"> 只有安卓端</li>
+<li><input disabled type="checkbox"> 无本地rss</li>
+<li><input disabled type="checkbox"> 不支持opml导入导出</li>
+<li><input disabled type="checkbox"> 内容页面优化不够</li>
+</ul>
+<p><img src="https://i.loli.net/2020/12/13/EmAqnzYQ1NyOoDM.png" alt="Feedme"></p>
+<p>更像是一个简洁的第三方客户端，支持众多主流平台登录。最突出的优点是简洁美观和自定义程度高，对于同一组源以及单独的源可以分别细化同步、布局、预载设置。但是内容优化不够，特别是登录Inoreader帐号用RSSHub官方源时，页面内容常常加载不全。</p>
+</li>
+<li><p><a href="https://github.com/FredJul/Flym" target="_blank" rel="noopener">Flym</a></p>
+<ul>
+<li><input checked disabled type="checkbox"> 可搜索添加源</li>
+<li><input checked disabled type="checkbox"> 自定义程度低</li>
+<li><input checked disabled type="checkbox"> 可以选择本地rss</li>
+<li><input checked disabled type="checkbox"> 支持opml导入导出</li>
+<li><input checked disabled type="checkbox"> 内容页面优化不错</li>
+<li><input checked disabled type="checkbox"> 收藏，标签功能</li>
+<li><input disabled type="checkbox"> 不可登录其它软件帐号</li>
+<li><input disabled type="checkbox"> 界面太过简朴</li>
+<li><input disabled type="checkbox"> 无shortcut、小部件</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><input disabled type="checkbox"> 只有安卓端</li>
+</ul>
+<p><img src="https://i.loli.net/2020/12/13/3JbURnfOvkN25QW.png" alt="Flym"></p>
+<p>   一个简洁的本地rss，没有那么多花里胡哨，但也没有明显缺点。因为本地rss所有无法使用官方RSSHub源。</p>
+<ol start="3">
+<li><p><a href="https://play.google.com/store/apps/details?id=allen.town.focus.reader" target="_blank" rel="noopener">FocusReader</a></p>
+<ul>
+<li><input checked disabled type="checkbox"> 可登录其它软件帐号</li>
+<li><input checked disabled type="checkbox"> 不可更改Inoreader域名</li>
+<li><input checked disabled type="checkbox"> 可搜索添加源</li>
+<li><input checked disabled type="checkbox"> 收藏，标签功能</li>
+<li><input checked disabled type="checkbox"> 界面美观</li>
+<li><input checked disabled type="checkbox"> 内容页面优化不错</li>
+<li><input checked disabled type="checkbox"> 自定义不错，同步频率、过滤等</li>
+<li><input disabled type="checkbox"> 无小部件、shortcut</li>
+<li><input disabled type="checkbox"> pro版订阅收费</li>
+<li><input disabled type="checkbox"> 只有安卓端</li>
+<li><input disabled type="checkbox"> 无本地rss</li>
+<li><input disabled type="checkbox"> 不支持opml导入导出</li>
+</ul>
+<p><img src="https://i.loli.net/2020/12/13/lpVdU7nMQsFKb4G.png" alt="FocusReader"></p>
+<p>可以登录其它软件帐号成为第三方，也可以本地rss，不用担心科学问题。颜值和简洁平衡得很好，目前体验最好的阅读器，而且开发者还在继续优化。只是免费版只能订阅20个源，有些少。目前高级版订阅制收费，且无国内支付方式（开发者说之后版本会支持）。</p>
+</li>
+<li><p><a href="https://www.inoreader.com" target="_blank" rel="noopener">Inoreader</a></p>
+<ul>
+<li><input checked disabled type="checkbox"> 老牌在线rss，稳定</li>
+<li><input checked disabled type="checkbox"> 可更改Inoreader域名（设置界面摇一摇）</li>
+<li><input checked disabled type="checkbox"> 可搜索添加源</li>
+<li><input checked disabled type="checkbox"> 收藏，标签功能</li>
+<li><input checked disabled type="checkbox"> 支持opml导入导出（在<a href="https://www.inoreader.com/apps#preferences-import-export" target="_blank" rel="noopener">隐秘的网页端</a> :point_left:）</li>
+<li><input checked disabled type="checkbox"> 内容页面优化不错</li>
+<li><input checked disabled type="checkbox"> 界面美观</li>
+<li><input disabled type="checkbox"> 有小部件</li>
+<li><input disabled type="checkbox"> pro版订阅收费</li>
+<li><input disabled type="checkbox"> 全平台有扩展</li>
+<li><input disabled type="checkbox"> 无本地rss</li>
+<li><input disabled type="checkbox"> 普通版无法设置刷新</li>
+</ul>
+<p><img src="https://i.loli.net/2020/12/13/pDfCq2Ncuwm9gMx.png" alt="Inoreader"></p>
+<p>老牌rss，实力强大，免费版也有150个源的额度。全平台更方便，对免费版而言最大的不足是刷新频率受控制。</p>
+</li>
+</ol>
+<p>目前使用的是免费版的Inoreader（贫穷），在线rss配合镜像域名<strong><a href="http://www.innoreader.com" target="_blank" rel="noopener">www.innoreader.com</a></strong>，不用担心科学问题。</p>
+<p>观望<a href="https://play.google.com/store/apps/details?id=allen.town.focus.reader" target="_blank" rel="noopener">FocusReader</a>，目前很看好，但是只有安卓端，且个人开发也有不稳定因素，非买断制也有性价比的考虑（贫穷）。其实20个源的限制可以通过<a href="https://github.com/AboutRSS/ALL-about-RSS#-rss-bots" target="_blank" rel="noopener">Telegram bot</a>收集订阅rss推送到一个电报频道，然后用RSSHub订阅这个频道的源。但是往往无法像原本的rss源可以接受全文，只能起到提醒作用（但只需要提醒功能直接使用Telegram bot就行，且无科学也可以通知）。</p>
+<p>总而言之，单从rss阅读器的角度，Inoreader的高级版是最好最稳的。“要么花时间，要么花钱。”</p>
+<h2 id="信息源"><a href="#信息源" class="headerlink" title="信息源"></a>信息源</h2><p>RSSHub项目刚出现时，我开始用rss，但是渐渐没有用，分析一下原因：</p>
+<ol>
+<li>是当时一股脑订阅了很多源，尤其是新闻类的，而我其实算是不怎么喜欢看新闻的人，不断的类似新闻这样我并不关注的信息推送，反而起到负面作用。</li>
+<li>二是那段时间太闲，主观上没有反思，被冗杂的信息淹没。</li>
+</ol>
+<p>总结经验，我将自己需要的信息分为两类：</p>
+<ol>
+<li>非主观主动，“不可确定”的热点新闻、知识类</li>
+<li>主观主动，可“确定”的自己的爱好、知识类</li>
+</ol>
+<p>前者，类rss的<a href="https://tophub.today/app" target="_blank" rel="noopener">今日热榜</a>是很好的选择，多平台，有网页端，可定制。</p>
+<p><img src="https://file.ipadown.com/tophub/assets/images/screenshot/s-1.png" alt="今日热榜"></p>
+<p>后者自然使用rss订阅，分享自己的部分rss，带有<strong>？</strong>的部分根据各自情况调整替换<strong>？</strong></p>
+<table>
+<thead>
+<tr>
+<th><a href="https://rsshub.app/bangumi/calendar/today" target="_blank" rel="noopener">bangumi 每日放送</a></th>
+<th>每天会更新的动画</th>
+<th><a href="https://rsshub.app/bangumi/calendar/today" target="_blank" rel="noopener">https://rsshub.app/bangumi/calendar/today</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mikan我的番组</td>
+<td><a href="http://mikanani.me" target="_blank" rel="noopener">Mikan</a>上订阅的番剧及字幕组的更新</td>
+<td><a href="https://mikanani.me/RSS/MyBangumi?token=**？**需要定制追番，各不相同" target="_blank" rel="noopener">https://mikanani.me/RSS/MyBangumi?token=**？**需要定制追番，各不相同</a></td>
+</tr>
+<tr>
+<td>EnjoyACG动漫资讯</td>
+<td>一个每周更新ACG资讯的电报频道</td>
+<td><a href="https://rsshub.app/telegram/channel/EnjoyACG" target="_blank" rel="noopener">https://rsshub.app/telegram/channel/EnjoyACG</a></td>
+</tr>
+<tr>
+<td>微博博主</td>
+<td>RSSHub<a href="https://docs.rsshub.app/social-media.html#wei-bo" target="_blank" rel="noopener">文档</a></td>
+<td><a href="https://rsshub.app/weibo/user/**？**微博用户uid" target="_blank" rel="noopener">https://rsshub.app/weibo/user/**？**微博用户uid</a></td>
+</tr>
+<tr>
+<td>twitter</td>
+<td>RSSHub<a href="https://docs.rsshub.app/social-media.html#twitter" target="_blank" rel="noopener">文档</a></td>
+<td><a href="https://rsshub.app/twitter/user/**？**推特用户id" target="_blank" rel="noopener">https://rsshub.app/twitter/user/**？**推特用户id</a></td>
+</tr>
+<tr>
+<td>YouTube</td>
+<td>RSSHub<a href="https://docs.rsshub.app/multimedia.html#youtube" target="_blank" rel="noopener">文档</a></td>
+<td><a href="https://rsshub.app/youtube/channel/**？**频道id" target="_blank" rel="noopener">https://rsshub.app/youtube/channel/**？**频道id</a> 或着非RSSHub： <a href="https://www.youtube.com/feeds/videos.xml?channel_id=**？**频道id" target="_blank" rel="noopener">https://www.youtube.com/feeds/videos.xml?channel_id=**？**频道id</a></td>
+</tr>
+<tr>
+<td>人人影视</td>
+<td><a href="http://www.rrys2020.com" target="_blank" rel="noopener">人人影视</a>剧集</td>
+<td><a href="http://rss.rrys.tv/rss/feed/**？**剧集页面有订阅rss的按钮" target="_blank" rel="noopener">http://rss.rrys.tv/rss/feed/**？**剧集页面有订阅rss的按钮</a></td>
+</tr>
+<tr>
+<td>Bilibili动态</td>
+<td>RSSHub<a href="https://docs.rsshub.app/social-media.html#bilibili-up-zhu-dong-tai" target="_blank" rel="noopener">文档</a></td>
+<td><a href="https://rsshub.app/bilibili/user/dynamic/**？**up主uid" target="_blank" rel="noopener">https://rsshub.app/bilibili/user/dynamic/**？**up主uid</a></td>
+</tr>
+<tr>
+<td>Bilibili投稿</td>
+<td>RSSHub<a href="https://docs.rsshub.app/social-media.html#bilibili-up-zhu-tou-gao" target="_blank" rel="noopener">文档</a></td>
+<td><a href="https://rsshub.app/bilibili/user/video/**？**up主uid" target="_blank" rel="noopener">https://rsshub.app/bilibili/user/video/**？**up主uid</a></td>
+</tr>
+<tr>
+<td>知乎用户的回答</td>
+<td>RSSHub<a href="https://docs.rsshub.app/social-media.html#zhi-hu-yong-hu-hui-da" target="_blank" rel="noopener">文档</a></td>
+<td><a href="https://rsshub.app/zhihu/people/answers/**？**作者id" target="_blank" rel="noopener">https://rsshub.app/zhihu/people/answers/**？**作者id</a></td>
+</tr>
+<tr>
+<td>酷安动态</td>
+<td>RSSHub<a href="https://docs.rsshub.app/other.html#ku-an-yong-hu-tu-wen-dong-tai" target="_blank" rel="noopener">文档</a></td>
+<td><a href="https://rsshub.app/coolapk/user/**？**酷安uid/dynamic" target="_blank" rel="noopener">https://rsshub.app/coolapk/user/**？**酷安uid/dynamic</a></td>
+</tr>
+<tr>
+<td>new Byte.Coffee</td>
+<td>播客<a href="https://byte.coffee/" target="_blank" rel="noopener">Byte.Coffee</a>的博客</td>
+<td><a href="https://byte.coffee/rss" target="_blank" rel="noopener">https://byte.coffee/rss</a></td>
+</tr>
+<tr>
+<td>阮一峰的网络日志</td>
+<td><a href="http://www.ruanyifeng.com/blog/" target="_blank" rel="noopener">科技爱好者周刊</a></td>
+<td><a href="http://feeds.feedburner.com/ruanyifeng" target="_blank" rel="noopener">http://feeds.feedburner.com/ruanyifeng</a></td>
+</tr>
+<tr>
+<td>知乎日报</td>
+<td>RSSHub<a href="https://docs.rsshub.app/social-media.html#zhi-hu-zhi-hu-ri-bao" target="_blank" rel="noopener">文档</a></td>
+<td><a href="https://rsshub.app/zhihu/daily" target="_blank" rel="noopener">https://rsshub.app/zhihu/daily</a></td>
+</tr>
+<tr>
+<td>酷安精选图文</td>
+<td>RSSHub<a href="https://docs.rsshub.app/other.html#ku-an" target="_blank" rel="noopener">文档</a></td>
+<td><a href="https://rsshub.app/coolapk/tuwen" target="_blank" rel="noopener">https://rsshub.app/coolapk/tuwen</a></td>
+</tr>
+<tr>
+<td>pixiv日排行</td>
+<td>RSSHub<a href="https://docs.rsshub.app/social-media.html#pixiv" target="_blank" rel="noopener">文档</a></td>
+<td><a href="https://rsshub.app/pixiv/ranking/day" target="_blank" rel="noopener">https://rsshub.app/pixiv/ranking/day</a></td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+<!-- 版权声明 下面三行代码是要添加内容 -->
+
+  <div>
+        <ul class="post-copyright">
+          <li class="post-copyright-author">
+          <strong>作者:  </strong>Zollmelon</a>
+          </li>
+          <li class="post-copyright-link">
+          <strong>文章链接:  </strong>
+          <a href="/RSS使用经验/" target="_blank" title="RSS使用经验">https://zollmelon.com/RSS使用经验/</a>
+          </li>
+          <li class="post-copyright-license">
+            <strong>版权声明:   </strong>
+            本博客所有文章除特别声明外，均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+            许可协议。转载请注明出处！
+          </li>
+        </ul>
+      <div>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/教程/">教程</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
+
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '请Zollmelon喝咖啡*罒▽罒*', // 可选参数，打赏标题
+  btnText: 'Donate', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: '/gallery/wechat.png',
+  alipayImage: '/gallery/alipay.png'
+});
+</script>
+      
+            
+      
+
+		<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+		<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+		<!--<script src="//cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script>
+<script src='//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js'></script>-->
+	<div id="vcomments"></div>
+	<script>
+		var notify = true == true ? true : false;
+		var verify = false == true ? true : false;
+		var visitor = true == true ? true : false;
+new Valine({
+el: '#vcomments',
+				notify: notify,
+				verify: verify,
+	app_id: 'bI957pzK3L2syA01ARwiiDGy-gzGzoHsz',
+app_key: 'HC4ywvMYYPSClf617JTt1GHo',
+			lang: 'en',
+			placeholder: 'ヾﾉ≧∀≦)o快来评论一下吧!',
+			avatar: 'monsterid',
+			pageSize: 10,
+			visitor: visitor
+});
+</script>
+
+
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/一周份の脑洞——第37期/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">一周份の脑洞——第37期</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article" style="overflow-y: scroll; max-width: 28%;">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#what-is-rss"><span class="nav-number">1.</span> <span class="nav-text">what is rss</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Why-rss-？"><span class="nav-number">2.</span> <span class="nav-text">Why rss ？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rss-Tools"><span class="nav-number">3.</span> <span class="nav-text">rss Tools</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ALL-about-RSS"><span class="nav-number">3.1.</span> <span class="nav-text">ALL-about-RSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rss源"><span class="nav-number">3.2.</span> <span class="nav-text">rss源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器扩展"><span class="nav-number">3.3.</span> <span class="nav-text">浏览器扩展</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自用方案"><span class="nav-number">4.</span> <span class="nav-text">自用方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#软件"><span class="nav-number">4.1.</span> <span class="nav-text">软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#信息源"><span class="nav-number">4.2.</span> <span class="nav-text">信息源</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2020 Zollmelonの小站 All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+<script src="/js/my.js"></script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+    <a href="/links" class="mobile-nav-link">Links</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-140410371-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="https://dnqof95d40fo6.cloudfront.net/atw7f8.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
